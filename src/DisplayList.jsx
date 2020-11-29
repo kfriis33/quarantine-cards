@@ -12,7 +12,6 @@ import RunIcon from "./icons/run.svg"
 import TextIcon from "./icons/text.svg"
 import TvIcon from "./icons/tv.svg"
 import VideoChatIcon from "./icons/video-chat.svg"
-
 import ArtIcon from "./icons/art.svg"
 import CookIcon from "./icons/cook.svg"
 import LanguageIcon from "./icons/language.svg"
@@ -45,24 +44,8 @@ class DisplayList extends Component {
         super(props);
     }
 
-    // loadImages = (list) => {
-    //     for (const item of list) {
-    //         // images[item.icon_name] = BakeIcon
-    //         import('./icons/'+item.icon_name+'.svg').then(svg => {
-    //             images[item.icon_name] = BakeIcon
-    //             console.log("SUCCESS", './icons/'+item.icon_name+'.svg')
-    //             this.setState({img:svg})
-    //         })
-    //         .catch(err => {
-    //             console.log("ERROR", err.message)
-    //             images[item.icon_name] = BakeIcon
-    //         })
-    //     }
-    //     console.log(images)
-    // }
-
+    // Creates a card for each activity
     createItem = item => {  
-
         return (
             <div>
                 <Card 

@@ -14,6 +14,7 @@ class MyDayContainer extends Component {
         }
     }
 
+    // Maps each added activity to a card to be displayed in the "My Day" container
     createItem = item => { 
         return (
             <div>
@@ -36,6 +37,7 @@ class MyDayContainer extends Component {
         )
     }
 
+    // Sums the total minutes of activities in "My Day"
     sumMinutes = () => {
         let total = 0
         for (const item of this.props.list) {

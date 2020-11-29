@@ -7,11 +7,13 @@ class ControlMenu extends Component {
     constructor(props) {
         super(props);
     }
-
+    
+    // Helper function for displaying the dropdown titles
     getTitle = (filterName, filterVal) => {
         return filterName+" ("+filterVal+")"
     }
 
+    // Resets all the filters and sorters to their default settings
     reset = () => {
         this.props.filterDuration("all")
         this.props.filterIntensity("any")

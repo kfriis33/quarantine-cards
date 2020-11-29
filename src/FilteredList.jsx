@@ -13,7 +13,7 @@ class FilteredList extends Component {
         };
       }
 
-
+    /* Functions for updating the state when different drop down items are selected */
     onSelectFilterDuration = event => {
         this.setState({
             duration: event
@@ -32,6 +32,7 @@ class FilteredList extends Component {
         })
     }
 
+    /* Functions for filtering cards based on whether they match the states */ 
     matchesFilterDuration = item => {
         if(this.state.duration === "all") {
             return true
@@ -60,7 +61,7 @@ class FilteredList extends Component {
         return this.matchesFilterDuration(item) && this.matchesFilterIntensity(item)
     }
 
-
+    // Sorting conditions based on which dropdown item is selected
     getSorter = (a, b) => {
         if (this.state.sorter === 'default') {
             return null
