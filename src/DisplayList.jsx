@@ -18,6 +18,8 @@ import LanguageIcon from "./icons/language.svg"
 import MovieIcon from "./icons/movie.svg"
 import NapIcon from "./icons/nap.svg"
 import TeaIcon from "./icons/tea.svg"
+import HiitIcon from "./icons/hiit.svg"
+import HikeIcon from "./icons/hike.svg"
 
 
 
@@ -35,7 +37,9 @@ const images = {
     'language':LanguageIcon,
     'movie':MovieIcon,
     'nap':NapIcon,
-    'tea':TeaIcon
+    'tea':TeaIcon,
+    'hiit':HiitIcon,
+    'hike': HikeIcon
 
 }
 
@@ -49,8 +53,7 @@ class DisplayList extends Component {
         return (
             <div>
                 <Card 
-                    style={{ width: '18rem', backgroundColor:'#9FC2CC'}}
-                    className="mb-2"
+                    className="fullCard mb-4"
                 >
                     <Card.Img className="card-image" variant="top" src={images[item.icon_name]}/>
 
@@ -66,6 +69,9 @@ class DisplayList extends Component {
                         </Card.Text>
                     <Button id="add-button" onClick={() => this.props.addCard(item)}>Add</Button>
                     </Card.Body>
+                    {/* <Card.Footer>
+                        {'Footer content'}
+                    </Card.Footer> */}
                 </Card>
             </div>
             );

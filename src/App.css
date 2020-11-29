@@ -85,8 +85,19 @@
 }
 
 /* Activity card */
+.fullCard { 
+  width: 18rem;
+  height: 450px;
+  background-color:#9FC2CC !important;
+  /* margin-bottom: 10px !important;
+  margin-top: 10px !important; */
+
+}
+
 .card-image {
-  padding: 25px 55px 5px 55px;
+  /* padding: 25px 55px 5px 55px; */
+  padding-top:25px;
+  height:150px;
 }
 
 .card-description {
