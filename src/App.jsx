@@ -17,7 +17,7 @@ const activityList = [
   {title:'Watch a movie', description:"Those long movies you always said you wanted to watch but still haven't? Now's their time.", duration:120, intensity:'low', icon_name:'movie'},
   {title:'Take a nap', description:"Sometimes the best activity is sleep. Turn off the lights, close the curtains, and get some shut-eye. You deserve it.", duration:30, intensity:'low', icon_name:'nap'},
   {title:'Make a cup of tea', description:"Tea makes everything better :)", duration:5, intensity:'low', icon_name:'tea'},
-  {title:'Draw or paint', description:"Break out your artistic side! Your creation may make for great wall art to spice up your room, or a gift for someone you miss.", duration:60, intensity:'moderate', icon_name:'art'},
+  {title:'Draw or paint', description:"Break out your artistic side! Your creation may make for great wall art to spice up your room, or a gift for someone you miss.", duration:45, intensity:'moderate', icon_name:'art'},
   {title:'Learn a new language', description:"Download an app like Duolingo and get going on that language you always wanted to learn or have been saying you want to practice.", duration:60, intensity:'moderate', icon_name:'language'},
   {title:'Cook a new recipe', description:"There are hundreds of amazing recipes out there waiting to be tried. Pick the one that looks the tastiest, gather the ingredients, and get started!", duration:90, intensity:'moderate', icon_name:'cook'},
   {title:'Do a HIIT workout', description:"Want a high intensity workout in a short amount of time? HIIT is for you! Search HIIT workouts to find free guided ones online.", duration:10, intensity:'high', icon_name:'hiit'},

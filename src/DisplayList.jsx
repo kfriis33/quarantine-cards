@@ -81,7 +81,7 @@ class DisplayList extends Component {
         return (
             <div>
                 <CardDeck>
-                    {this.props.list.map(this.createItem)};
+                    {this.props.list.map(this.createItem)}
                 </CardDeck>
             </div>
         )
