@@ -1,11 +1,7 @@
-import logo from './logo.svg';
 import './App.css';
 import FilteredList from './FilteredList';
-import { render } from '@testing-library/react';
 import React from "react";
-import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Container from 'react-bootstrap/Container'
 import MyDayContainer from './MyDayContainer';
 
 
@@ -61,7 +57,7 @@ export default class App extends React.Component {
   removeCard = removeItem => {
     console.log("remove", removeItem)
     this.setState({
-      cartItems:this.state.cartItems.filter(item => {return item.key !=removeItem.key}),
+      cartItems:this.state.cartItems.filter(item => {return item.key !== removeItem.key}),
       cartTotalMins: this.state.cartTotalMins - removeItem.duration
     })
   }
