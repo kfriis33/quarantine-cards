@@ -24,6 +24,7 @@ class ControlMenu extends Component {
         return (
             <div>
                 <ButtonToolbar className="toolbar">
+                <p className="toolbar-text-no-padding">Filter by:</p>
                 <DropdownButton className="dropdown-button" id="dropdown-button" title={this.getTitle("Duration",this.props.duration)}>
                     <Dropdown.Item eventKey="all" onSelect={this.props.filterDuration}>All</Dropdown.Item>
                     <Dropdown.Item eventKey="short" onSelect={this.props.filterDuration}>Short</Dropdown.Item>

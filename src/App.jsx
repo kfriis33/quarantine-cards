@@ -68,7 +68,7 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <div className='App-body row no-gutters' >
+      <div className='App-body row no-gutters main-container' >
         <div className='col-lg-9'>
           <div>
             <h1>Quarantine Cards</h1>

@@ -19,7 +19,7 @@ class MyDayContainer extends Component {
         return (
             <div>
             <Card 
-                style={{ width: '18rem', backgroundColor:"#694D75"}}
+                style={{ width: '16rem', backgroundColor:"#694D75", textAlign:'center'}}
                 className="mb-2"
                 text="white"
             >
@@ -50,9 +50,9 @@ class MyDayContainer extends Component {
         return (
             <div className="my-day">
                 <h2>My Day</h2>
-                <h5>Total time planned: {this.props.totalMins} mins</h5>
+                <h5>Time planned: {this.props.totalMins} mins</h5>
                 <CardDeck>
-                    {this.props.list.map(this.createItem)};
+                    {this.props.list.map(this.createItem)}
                 </CardDeck>
             </div>
         )
