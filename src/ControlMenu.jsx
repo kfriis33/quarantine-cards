@@ -22,7 +22,7 @@ class ControlMenu extends Component {
 
     render() {
         return (
-            <div>
+            <div className="sticky">
                 <ButtonToolbar className="toolbar">
                 <p className="toolbar-text-no-padding">Filter by:</p>
                 <DropdownButton className="dropdown-button" id="dropdown-button" title={this.getTitle("Duration",this.props.duration)}>

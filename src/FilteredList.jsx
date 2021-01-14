@@ -78,7 +78,10 @@ class FilteredList extends Component {
         return (
             <div>
                 <ControlMenu duration={this.state.duration} intensity={this.state.intensity} sorter={this.state.sorter} filterDuration={this.onSelectFilterDuration} filterIntensity={this.onSelectFilterIntensity} changeSort={this.onSelectChangeSort}/>
-                <DisplayList list={this.props.list.filter(this.matchesFilters).sort(this.getSorter)} addCard={this.props.addCard} />
+                <div >
+                    <DisplayList list={this.props.list.filter(this.matchesFilters).sort(this.getSorter)} addCard={this.props.addCard} images={this.props.images}/>
+
+                </div>
 
             </div>
         )
