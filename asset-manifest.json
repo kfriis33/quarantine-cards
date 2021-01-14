@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/quarantine-cards/static/css/main.d5313d03.chunk.css",
+    "main.js": "/quarantine-cards/static/js/main.1766f4ea.chunk.js",
+    "main.js.map": "/quarantine-cards/static/js/main.1766f4ea.chunk.js.map",
+    "runtime-main.js": "/quarantine-cards/static/js/runtime-main.2e11070d.js",
+    "runtime-main.js.map": "/quarantine-cards/static/js/runtime-main.2e11070d.js.map",
+    "static/css/2.1a02f21c.chunk.css": "/quarantine-cards/static/css/2.1a02f21c.chunk.css",
+    "static/js/2.0f537cb2.chunk.js": "/quarantine-cards/static/js/2.0f537cb2.chunk.js",
+    "static/js/2.0f537cb2.chunk.js.map": "/quarantine-cards/static/js/2.0f537cb2.chunk.js.map",
+    "static/js/3.0f02de55.chunk.js": "/quarantine-cards/static/js/3.0f02de55.chunk.js",
+    "static/js/3.0f02de55.chunk.js.map": "/quarantine-cards/static/js/3.0f02de55.chunk.js.map",
+    "index.html": "/quarantine-cards/index.html",
+    "static/css/2.1a02f21c.chunk.css.map": "/quarantine-cards/static/css/2.1a02f21c.chunk.css.map",
+    "static/css/main.d5313d03.chunk.css.map": "/quarantine-cards/static/css/main.d5313d03.chunk.css.map",
+    "static/js/2.0f537cb2.chunk.js.LICENSE.txt": "/quarantine-cards/static/js/2.0f537cb2.chunk.js.LICENSE.txt",
+    "static/media/art.11aafb10.svg": "/quarantine-cards/static/media/art.11aafb10.svg",
+    "static/media/bake.9b71582e.svg": "/quarantine-cards/static/media/bake.9b71582e.svg",
+    "static/media/cook.069f5503.svg": "/quarantine-cards/static/media/cook.069f5503.svg",
+    "static/media/hiit.509ca245.svg": "/quarantine-cards/static/media/hiit.509ca245.svg",
+    "static/media/hike.021ee4fc.svg": "/quarantine-cards/static/media/hike.021ee4fc.svg",
+    "static/media/language.00c5a4d9.svg": "/quarantine-cards/static/media/language.00c5a4d9.svg",
+    "static/media/meditate.b2605619.svg": "/quarantine-cards/static/media/meditate.b2605619.svg",
+    "static/media/movie.47fa9658.svg": "/quarantine-cards/static/media/movie.47fa9658.svg",
+    "static/media/nap.12965bdf.svg": "/quarantine-cards/static/media/nap.12965bdf.svg",
+    "static/media/plant.220bf66f.svg": "/quarantine-cards/static/media/plant.220bf66f.svg",
+    "static/media/puzzle.8507044f.svg": "/quarantine-cards/static/media/puzzle.8507044f.svg",
+    "static/media/run.9e53b763.svg": "/quarantine-cards/static/media/run.9e53b763.svg",
+    "static/media/tea.50403a09.svg": "/quarantine-cards/static/media/tea.50403a09.svg",
+    "static/media/text.8e2e5a20.svg": "/quarantine-cards/static/media/text.8e2e5a20.svg",
+    "static/media/tv.39a0d68a.svg": "/quarantine-cards/static/media/tv.39a0d68a.svg",
+    "static/media/video-chat.99627540.svg": "/quarantine-cards/static/media/video-chat.99627540.svg",
+    "static/media/walk.c62840c9.svg": "/quarantine-cards/static/media/walk.c62840c9.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2e11070d.js",
+    "static/css/2.1a02f21c.chunk.css",
+    "static/js/2.0f537cb2.chunk.js",
+    "static/css/main.d5313d03.chunk.css",
+    "static/js/main.1766f4ea.chunk.js"
+  ]
+}
