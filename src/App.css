@@ -1,12 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap');
 
 /* App-level styling */
 
 html, body {
   height:100%;
   text-align: left;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Rubik', sans-serif !important;
 
+}
+
+h5 {
+  font-weight: 400 !important;
 }
 
 a {
@@ -46,13 +50,13 @@ a {
   margin: 0 auto;
   overflow: hidden;
   animation:
-    typing 3s steps(13, end) 1s 1 normal both, 
+    typing 4s steps(15, end) 1s 1 normal both, 
     blink-caret .75s steps(13, end) infinite;
 }
 
 @keyframes typing {
   from {width:0}
-  to {width:192px}
+  to {width:210px}
 
 }
 
@@ -75,6 +79,7 @@ a {
   margin-top:15vh;
   padding:30px 40px;
   font-size: 48px;
+  font-weight: 500;
   text-transform: uppercase;
   border-radius: 40%;
   border-width: 2px;
@@ -246,7 +251,7 @@ a {
 .card-badge{
   margin: 5px;
   font-size: 13px !important;
-  /* background-color: #F1ECCE; */
+  font-weight: 600 !important;
 }
 
 #add-button {
@@ -281,6 +286,9 @@ a {
 
   color:black;
   min-height: 450px;
+
+
+
   padding:20px;
   /* margin-top:160px; */
   margin-left:20px;
@@ -365,7 +373,8 @@ a {
   border-color: #f8f1dd;
 }
 
-/* .my-day-body {
-  background-color: #f8f1dd !important;
-  border-color: #f8f1dd !important;
-} */
+.my-day-body {
+  
+  height:80vh;
+  overflow-y:auto;
+}
