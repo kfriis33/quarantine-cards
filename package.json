@@ -14,10 +14,12 @@
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.2.2",
     "bootstrap": "^4.5.3",
+    "jspdf": "^2.3.0",
     "react": "^17.0.1",
     "react-bootstrap": "^1.4.0",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.1",
+    "react-to-pdf": "0.0.13",
     "react-typing-effect": "^2.0.4",
     "web-vitals": "^0.2.4"
   },

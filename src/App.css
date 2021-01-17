@@ -15,7 +15,17 @@ h5 {
 
 a {
   cursor: pointer;
+  color: #1b5299 !important;
 }
+
+a:hover {
+  color: #367EDB !important;
+}
+.reset-link {
+  text-decoration: underline;
+
+}
+
 
 .btn:focus, .btn.focus, .btn:active {
   box-shadow: 0 0 0 3px rgba(235, 235, 235, 0.705) !important;
@@ -147,6 +157,9 @@ a {
 
 }
 
+.instructions {
+  width: 70%;
+}
 .cards-div {
   margin-right:50px;
   /* padding-left: 20px; */
@@ -170,7 +183,36 @@ a {
   /* position: fixed; */
   width:100%;
   box-shadow: 0 4px 6px -6px #222;
+}
 
+.alert-bar {
+  position:fixed !important;
+  bottom:0;
+  background-color: white;
+  margin-left: auto;
+  right:10px;
+  z-index: 100;
+  /* position: fixed; */
+  /* width:100%; */
+  box-shadow: 0 4px 6px -6px #222;
+  background-color: black;
+  border: 1px solid rgba(255, 255, 255, 0.87) !important;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+.alert-bar > a {
+  color: #faedca !important;
+}
+
+.alert-bar > a:hover {
+  color: #f8f1dd !important;
+}
+
+.alert-bar .close {
+  color: rgba(255, 255, 255, 0.87) !important;
+}
+.alert-bar .close:hover {
+  color: white !important;
 }
 
 .toolbar-text {
@@ -207,14 +249,6 @@ a {
   border-color: #C5C5C5;
 }
 
-.reset-link {
-  text-decoration: underline;
-  color: #1b5299;
-}
-
-.reset-link:hover {
-  color: #367EDB;
-}
 
 /* Card deck (grid of all activities) */
 .card-deck {
@@ -254,15 +288,16 @@ a {
   font-weight: 600 !important;
 }
 
-#add-button {
-  background-color: #1b5299;
-  border-color: #1b5299;
+.blue-button {
+  background-color: #1b5299 !important;
+  border-color: #1b5299 !important;
+  margin:auto;
 
 }
 
-#add-button:hover {
-  background-color: #367EDB;
-  border-color: #367EDB;
+.blue-button:hover {
+  background-color: #367EDB !important;
+  border-color: #367EDB !important;
 }
 
 .close-button {
@@ -375,6 +410,15 @@ a {
 
 .my-day-body {
   
-  height:80vh;
+
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  flex:none;
+  
+}
+
+.my-day-items {
+  height:70vh;
   overflow-y:auto;
 }

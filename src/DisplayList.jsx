@@ -30,7 +30,7 @@ class DisplayList extends Component {
                     <Badge className="card-badge" variant="light">~ {item.duration} mins</Badge>
                         <Badge className="card-badge" variant="light">{item.intensity} intensity</Badge>
                         </Card.Text>
-                    <Button id="add-button" onClick={() => this.props.addCard(item)}>Do it</Button>
+                    <Button className="blue-button" onClick={() => this.props.addCard(item)}>Do it</Button>
                     </Card.Body>
                     {/* <Card.Footer>
                         {'Footer content'}

@@ -9,6 +9,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 import Card from 'react-bootstrap/Card'
 import Badge from 'react-bootstrap/Badge'
+import Alert from 'react-bootstrap/Alert'
 
 import RedoIcon from '@material-ui/icons/Redo';
 
@@ -81,7 +82,9 @@ export default class App extends React.Component {
       cardDrawn: null,
       cartItems: [], // List of items that are in "My Day"
       cartTotalMins: 0, // Total sum of minutes in "My Day"
+      cartOpen: false, // Whether "My Day" is open
       animationEnded:false,
+      alert: null
     }
   }
   
@@ -106,12 +109,16 @@ export default class App extends React.Component {
       intensity: newItem.intensity,
       key: Date.now()
     };
-    console.log("added", itemCopy)
+
     this.setState({
       cartItems:[...this.state.cartItems, itemCopy],
-      cartTotalMins: this.state.cartTotalMins + itemCopy.duration
+      cartTotalMins: this.state.cartTotalMins + itemCopy.duration,
+      alert: <Alert className="alert-bar" onClose={() => this.setState({alert:null})} dismissible>"{newItem.title}" added. See {' '}<Alert.Link href='#my-day-id' onClick={()=>this.setState({
+        cartOpen: true
+      })}>My Day</Alert.Link>.</Alert>
     })
-    console.log("cart", this.state.cartItems)
+
+    
   }
 
   removeCard = (event, removeItem) => {
@@ -123,7 +130,12 @@ export default class App extends React.Component {
       cartTotalMins: this.state.cartTotalMins - removeItem.duration
     })
   }
-
+  
+  toggleCart = (event) => {
+    this.setState({
+      cartOpen: !this.state.cartOpen
+    })
+  }
 
   // Creates a card for each activity
   createItem = item => {  
@@ -145,7 +157,7 @@ export default class App extends React.Component {
                 <Badge className="card-badge" variant="light">~ {item.duration} mins</Badge>
                     <Badge className="card-badge" variant="light">{item.intensity} intensity</Badge>
                     </Card.Text>
-                <Button id="add-button" onClick={() => this.addCard(item)}>Do it</Button>
+                <Button className="blue-button" onClick={() => this.addCard(item)}>Do it</Button>
                 </Card.Body>
                 {/* <Card.Footer>
                     {'Footer content'}
@@ -201,18 +213,23 @@ export default class App extends React.Component {
 
 
 
-      <div className='browse-div' >
+      <div id="browse-id" className='browse-div' >
         <div >
           <h2>Quarantine Cards</h2>
-          <h5>Activity ideas to help you get through quarantine</h5>
+          <div className="instructions">
+          <p><i>Find activity ideas to help you get through quarantine! Use the dropdowns to narrow your search, and if you find an activity you want to do click "do it" to add it to your "my day" aggregator on the right.</i></p>
+
+          </div>
+
           <div className="cards-div">
             <FilteredList list={activityList} addCard={this.addCard} images={images}/>
           </div>
         </div>
-        <div>
-          <MyDayContainer list={this.state.cartItems} isCart={true} removeCard={this.removeCard} totalMins={this.state.cartTotalMins}/>
+        <div id="my-day-id">
+          <MyDayContainer list={this.state.cartItems} isCart={true} removeCard={this.removeCard} totalMins={this.state.cartTotalMins} cartOpen={this.state.cartOpen} toggleCart={this.toggleCart}/>
         </div>
       </div>
+      {this.state.alert}
     </div>
     );
   }

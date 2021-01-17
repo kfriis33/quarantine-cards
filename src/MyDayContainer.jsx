@@ -10,12 +10,15 @@ import CloseIcon from '@material-ui/icons/Close';
 import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 
+import { jsPDF } from "jspdf";
+
+
+
 class MyDayContainer extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            total_mins: 0,
-            cartOpen: false // Whether the cart is open
+            total_mins: 0
 
         }
     }
@@ -54,30 +57,76 @@ class MyDayContainer extends Component {
         }
         this.setState({total_mins: total})
     }
-    toggleCart = (event) => {
-        this.setState({
-          cartOpen: !this.state.cartOpen
-        })
-        console.log(this.state)
+
+
+      makeBullet = (item) => {
+          console.log(item)
+        //   var checkBox = new jsPDF.API.AcroFormCheckBox();
+
+        //   checkBox.fontSize = 20;
+        //   checkBox.fieldName = "CheckBox1";
+        //   // checkBox.caption ="hello world"
+        //   checkBox.Rect = [50, 120, 10, 10];
+        //   checkBox.value = 'No'
+  
+        //   console.log("checkbox:", checkBox)
+        // //   doc.addField(checkBox);
+
+          return '\u2022  ' + item.title + ' (~' +item.duration + ' min)'
       }
 
-    // function Content() {
+      downloadCart = (event) => {
+        event.stopPropagation();
+
+        const doc = new jsPDF();
+
+        if (this.props.list.length === 0) {
+            doc.text(["Hello!", "Looks like you haven't added anything to My Day.", "Return to the main page and add some activities!"], 30, 30)
+        } else {
+            doc.text(["Hello!", "Congrats on planning out some things to do today.", "This is what you're going to:"], 30, 30)
+
+            doc.text(this.props.list.map(this.makeBullet), 40, 55);
+        }
+
+        doc.save("MyDay.pdf");
+
+      }
+
+    // function Content() {s
         
     // }
     render() {
         // let mainClasses = 'col-sm-9'
         // // this.state.cartOpen ? 'col-sm-9' : 'col-sm-12';
-        let cartClasses = this.state.cartOpen ? 'my-day open' : ' my-day closed';
+        let cartClasses = this.props.cartOpen ? 'my-day open' : ' my-day closed';
         let content;
         let buttonIcon;
-        if (this.state.cartOpen) {
+        let cardDeck;
+        if (this.props.list.length == 0) {
+            cardDeck = (<p className="mx-3 mt-3 text-center"><i>You have no activities selected! Select activities by clicking the "Do it" button on an activity card.</i></p>)
+        } else {
+            cardDeck = (
+                <CardDeck>
+                    {this.props.list.map(this.createItem)}
+                </CardDeck>
+            )
+        }
+        if (this.props.cartOpen) {
             content = (
                 <div className="my-day-body">
-                    <h3>My Day</h3>
-                    <h5>{Math.floor(this.props.totalMins /60)} hr {this.props.totalMins % 60} min</h5>
-                    <CardDeck>
-                        {this.props.list.map(this.createItem)}
-                    </CardDeck>
+                    <div>
+                        <h3>My Day</h3>
+                        <h5>{Math.floor(this.props.totalMins /60)} hr {this.props.totalMins % 60} min</h5>
+                        <div className="my-day-items">
+                        {cardDeck}
+                        </div>
+                    </div>
+                    
+                    
+                <Button className="blue-button mt-3" onClick={this.downloadCart}>Save Day PDF</Button>
+                    
+
+                    
                 </div>
             )
             buttonIcon= <ArrowDropDownIcon fontSize='large'/>
@@ -87,8 +136,8 @@ class MyDayContainer extends Component {
         }
 
         return (
-            <div className={cartClasses} onClick={this.toggleCart}>
-            <Button id="cart-button" onClick={this.toggleCart}>{buttonIcon}My Day <strong>({this.props.list.length})</strong></Button>
+            <div className={cartClasses} onClick={this.props.toggleCart}>
+            <Button id="cart-button" onClick={this.props.toggleCart}>{buttonIcon}My Day <strong>({this.props.list.length})</strong></Button>
             {content}
                 
             </div>
